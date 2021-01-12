@@ -1,5 +1,9 @@
 package binaryTree;
 
+import com.sun.source.tree.Tree;
+
+import java.util.Stack;
+
 class TreeNode{
     int data;
     TreeNode left , right;
@@ -31,6 +35,25 @@ public class BinaryTreeEx {
         System.out.println(node.data);
         printInOrder(node.right);
     }
+
+    public void printInOrderWithoutRecursion() {
+        if (root == null)
+            return;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = root;
+
+        while(curr!=null || stack.size()!=0)
+        {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            System.out.println(curr.data);
+            curr = curr.right;
+        }
+    }
+
     public void printPreOrder(TreeNode node){
         if(node==null){
             return;
@@ -57,11 +80,41 @@ public class BinaryTreeEx {
         tree.root.left.right=new TreeNode(5);
         tree.root.right.left=new TreeNode(6);
         tree.root.right.right=new TreeNode(7);
-        tree.printInOrder();
+//        tree.printInOrder();
         System.out.println("-----");
-        tree.printPreOrder();
-        System.out.println("-----");
-        tree.printPostOrder();
+//        tree.printPreOrder();
+//        System.out.println("-----");
+//        tree.printPostOrder();
+//        tree.printInOrderWithoutRecursion();
+        tree.morrisTraversalInorder();
+    }
 
+    private void morrisTraversalInorder() {
+        TreeNode curr = root;
+
+        while(curr!=null){
+            if(curr.left==null){
+                System.out.println(curr.data);
+                curr=curr.right;
+            }else{
+                TreeNode right = findRightMost(curr, curr.left);
+                if(right.right==null){
+                    right.right=curr;
+                    curr=curr.left;
+                }
+                else{
+                    System.out.println(curr.data);
+                    right.right=null;
+                    curr=curr.right;
+                }
+            }
+        }
+    }
+
+    private TreeNode findRightMost(TreeNode curr, TreeNode pre) {
+        while(pre.right!=null && pre.right!=curr){
+            pre=pre.right;
+        }
+        return pre;
     }
 }
