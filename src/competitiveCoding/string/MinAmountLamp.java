@@ -1,4 +1,4 @@
-package design.string;
+package competitiveCoding.string;
 
 public class MinAmountLamp {
     public static void main(String[] args) {

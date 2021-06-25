@@ -1,4 +1,4 @@
-package design.string;
+package competitiveCoding.string;
 
 import java.util.HashMap;
 

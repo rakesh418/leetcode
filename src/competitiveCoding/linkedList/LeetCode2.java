@@ -1,4 +1,4 @@
-package design.linkedList;
+package competitiveCoding.linkedList;
 
 public class LeetCode2 {
 

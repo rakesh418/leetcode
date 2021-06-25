@@ -1,4 +1,4 @@
-package design.string;
+package competitiveCoding.string;
 
 public class LongestCommonPrefix2 {
     public static void main(String[] args) {

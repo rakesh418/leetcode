@@ -1,8 +1,7 @@
 package design.proxy;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-
+/*
+Proxy is an object  which comes in place of actual objects
+ */
 public class Test {
     public static void main(String[] args) {
 //        Customer customer = new CustomerImpl();

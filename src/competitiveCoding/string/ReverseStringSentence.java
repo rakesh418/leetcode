@@ -1,4 +1,4 @@
-package design.string;
+package competitiveCoding.string;
 
 public class ReverseStringSentence {
     public static void main(String[] args) {

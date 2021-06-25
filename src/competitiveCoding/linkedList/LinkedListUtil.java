@@ -1,4 +1,4 @@
-package design.linkedList;
+package competitiveCoding.linkedList;
 
 public class LinkedListUtil {
     public static Node getLinkedList(int[] array) {
