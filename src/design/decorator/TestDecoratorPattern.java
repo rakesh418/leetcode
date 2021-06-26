@@ -6,7 +6,7 @@ new BufferedReader(new FileReader())
 --> fileReader can read one line
 --> decorated with BufferedReader -- it can read multiple lines
 */
-public class Test {
+public class TestDecoratorPattern {
     public static void main(String[] args) {
         Pizza pizza = new PlainPizza();
         pizza.bake();

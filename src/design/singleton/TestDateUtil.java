@@ -1,7 +1,9 @@
 package design.singleton;
 
 import java.io.*;
+/*
 
+ */
 public class TestDateUtil {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         DateUtil util1 = DateUtil.getTest();
