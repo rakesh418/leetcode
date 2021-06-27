@@ -1,4 +1,4 @@
-package competitiveCoding.array;
+package competitiveCoding.search;
 
 public class BinarySearch {
 
