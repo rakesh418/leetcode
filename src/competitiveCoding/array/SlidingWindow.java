@@ -10,7 +10,7 @@ import java.util.LinkedList;
 
 public class SlidingWindow {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1, 4, 5, 2, 3, 6};
+        int[] arr = {1, 2, 3, 1, 4, 5, 2, 3, 7};
         int k =3;
         Deque<Integer> deque = new LinkedList<>();
         int i=0;
@@ -31,6 +31,7 @@ public class SlidingWindow {
                 deque.removeLast();
             deque.add(i);
         }
-        System.out.println(deque.peek());
+        System.out.println("*");
+        System.out.println(arr[deque.peek()]);
     }
 }
