@@ -6,16 +6,15 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) {
 
-        Queue<Integer> queue = new ArrayDeque<>();
-        queue.add(1);
-        queue.add(2);
-        System.out.println(queue);
-        System.out.println(queue.poll());
-        System.out.println(queue);
-        queue.offer(1);
-        queue.add(1);
-        System.out.println(queue);
-        System.out.println(queue.poll());
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(1);
+        treeSet.add(10);
+        treeSet.add(11);
+        treeSet.add(12);
+        System.out.println(treeSet);
+
+        System.out.println(treeSet.pollFirst());
+        System.out.println(treeSet);
 
     }
 }
