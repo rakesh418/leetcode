@@ -15,6 +15,5 @@ public class Test {
 
         System.out.println(treeSet.pollFirst());
         System.out.println(treeSet);
-
     }
 }
