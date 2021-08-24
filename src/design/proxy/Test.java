@@ -1,6 +1,7 @@
 package design.proxy;
 /*
-Proxy is an object  which comes in place of actual objects
+structural design pattern
+Proxy is an  object  which comes in place of actual objects
  */
 public class Test {
     public static void main(String[] args) {
